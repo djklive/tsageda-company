@@ -16,3 +16,87 @@
     background-image: url("pngwing\ 1.png");
     /* background-size: cover; */
 }
+
+/* animation qui sommes nous */
+
+.cote-droit{
+    animation: droit 2s ease;
+    transition: .9s;
+}
+@keyframes droit {
+    from{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.cote-gauche{
+    animation: gauche 2s ease;
+    transition: .9s;
+}
+@keyframes gauche {
+    from{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* animation colissant services */
+.over1{
+    overflow: hidden;
+  
+
+}
+.over{
+    transform: translateY(130px);
+
+    align-items: flex-start;
+}
+
+.over1:hover .over{
+    transform: translate(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+   
+}
+/* animation haut */
+
+.haut{
+    animation: haut 2s ease;
+    transition: 2s;
+}
+@keyframes haut{
+    from {
+        opacity: 0;
+        transform: translateY(200px);
+        
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* animation chef entreprise*/
+.overChef{
+    transform: scale(0);
+    transition: .9s;
+    transform-origin: center;
+}
+.overChef1{
+    overflow: hidden;
+}
+.overChef1:hover .overChef{
+    transform: scale(1);
+
+}
