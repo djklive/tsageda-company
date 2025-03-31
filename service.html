@@ -8,17 +8,19 @@
     <script src="assets/js/tailwindcss.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,600" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/styleIndex.css">
+    <link rel="stylesheet" href="assets/css/styleservice.css">
+    <script src="assets/js/scriptservice.js" defer></script>
     <script src="assets/js/script_nav.js" defer></script>
   </head>
   <body class="bg-[#ececec]">
     <!-- Header -->
-    <header class=" bg-white flex flex-row md:flex-row items-center justify-around p-4 md:h-[88px] ">
-      <div class="font-bold text-[#0047ab] text-2xl">
+    <header class=" bg-white flex flex-row md:flex-row items-center justify-around p-4 md:h-[88px] animate-on-scroll fadeIn">
+      <div class="font-bold text-[#0047ab] text-2xl hover-scale">
         TSADEGA COMPANY
       </div>
 
       <div class="flex flex-rox md:flex-row items-center gap-4 md:gap-8">
-        <div class="flex items-center hidden md:flex lg:flex">
+        <div class="flex items-center hidden md:flex lg:flex hover-scale">
           <div class="w-[43px] h-[43px]">
             <img class="w-[44px] h-10 mt-0.5 ml-[9px]" alt="Location icon" src="assets/images/image_nav/marker_50px.png" />
           </div>
@@ -28,7 +30,7 @@
           </div>
         </div>
 
-        <div class="flex items-center hidden md:flex lg:flex md:mr-4 lg:mr-4">
+        <div class="flex items-center hidden md:flex lg:flex md:mr-4 lg:mr-4 hover-scale">
           <img class="w-11 h-11" alt="Phone icon" src="assets/img/cil-mobile.svg" />
           <div class="ml-1">
             <div class="font-medium text-[#8b8b8b] text-[15px]">Appelez-nous</div>
@@ -36,44 +38,44 @@
           </div>
         </div>
 
-        <img id="menu" src="assets/images/image_nav/menu_50px.png" class="block md:hidden lg:hidden w-[30px]" alt="nav">
+        <img id="menu" src="assets/images/image_nav/menu_50px.png" class="block md:hidden lg:hidden w-[30px] hover-scale" alt="nav">
 
-        <button class="w-full md:w-[210px] h-12 rounded-[10px] border-[1.5px] border-[#0047ab] text-[#0047ab] font-bold text-2xl hidden md:block lg:block">
+        <button class="w-full md:w-[210px] h-12 rounded-[10px] border-[1.5px] border-[#0047ab] text-[#0047ab] font-bold text-2xl hidden md:block lg:block hover:bg-[#0047ab] hover:text-white transition-all duration-300">
           Services
         </button>
       </div>
     </header>
 
     <!-- Navigation -->
-    <nav class="w-full bg-[#0047ab] flex flex-col md:flex-row items-center p-5 md:px-[129px] md:h-12 space-y-4 md:space-y-0 justify-between hidden md:flex lg:flex z-50">
+    <nav class="w-full bg-[#0047ab] flex flex-col md:flex-row items-center p-5 md:px-[129px] md:h-12 space-y-4 md:space-y-0 justify-between hidden md:flex lg:flex z-50 animate-on-scroll fadeIn slideIn">
       <div class="flex flex-col md:flex-row gap-4 md:gap-8 text-center">
-        <a href="#" class="h-full font-normal text-white text-xl px-5 py-5 hover:bg-white hover:text-[#0047AB]">Accueil</a>
-        <a href="#" class="h-full font-normal text-white text-xl px-5 py-5 hover:bg-white hover:text-[#0047AB]">Services</a>
-        <a href="#" class="h-full font-normal text-white text-xl px-5 py-5 hover:bg-white hover:text-[#0047AB]">A Propos</a>
-        <a href="#" class="h-full font-normal text-white text-xl px-5 py-5 hover:bg-white hover:text-[#0047AB]">Contactez-nous</a>
+        <a href="#" class="h-full font-normal text-white text-xl px-5 py-5 hover:bg-white hover:text-[#0047AB] transition-all duration-300">Accueil</a>
+        <a href="#" class="h-full font-normal text-white text-xl px-5 py-5 hover:bg-white hover:text-[#0047AB] transition-all duration-300">Services</a>
+        <a href="#" class="h-full font-normal text-white text-xl px-5 py-5 hover:bg-white hover:text-[#0047AB] transition-all duration-300">A Propos</a>
+        <a href="#" class="h-full font-normal text-white text-xl px-5 py-5 hover:bg-white hover:text-[#0047AB] transition-all duration-300">Contactez-nous</a>
       </div>
       <div class="flex items-center">
-        <img src="assets/img/bx-search.svg" class="w-7 h-7" alt="Search" />
+        <img src="assets/img/bx-search.svg" class="w-7 h-7 hover-scale" alt="Search" />
       </div>
     </nav>
 
     <!-- sidbare -->
     <div id="sidebar" class="sidebar hidden fixed flex w-full absolute top-0 py-5 text-white bg-[#0047AB] h-[100vh] shadow-xl flex-col items-center  md:hidden lg:hidden duration-[.2s] z-50">
         <div class="flex flex-row justify-between items-center px-5 w-full">
-            <h1 class="text-[24px] text-white font-bold">
+            <h1 class="text-[24px] text-white font-bold hover-scale">
                 TSADEGA COMPANY
             </h1>
-            <img id="removeSidebar" class= "w-[25px] " src="assets/images/image_nav/delete_48px.png" alt="">
+            <img id="removeSidebar" class= "w-[25px] hover-scale" src="assets/images/image_nav/delete_48px.png" alt="">
         </div>
-        <a href="#" class="h-[80px] w-full flex justify-center items-center px-5 hover:bg-white hover:text-[#0047AB]">Accueil</a>
-        <a href="#" class="h-[80px] w-full flex justify-center items-center px-5 hover:bg-white hover:text-[#0047AB]">Services</a>
-        <a href="#" class="h-[80px] w-full flex justify-center items-center px-5 hover:bg-white hover:text-[#0047AB]">A propos</a>
-        <a href="#" class="h-[80px] w-full flex justify-center items-center px-5 hover:bg-white hover:text-[#0047AB]">Contactez-nous</a>
+        <a href="#" class="h-[80px] w-full flex justify-center items-center px-5 hover:bg-white hover:text-[#0047AB] transition-all duration-300">Accueil</a>
+        <a href="#" class="h-[80px] w-full flex justify-center items-center px-5 hover:bg-white hover:text-[#0047AB] transition-all duration-300">Services</a>
+        <a href="#" class="h-[80px] w-full flex justify-center items-center px-5 hover:bg-white hover:text-[#0047AB] transition-all duration-300">A propos</a>
+        <a href="#" class="h-[80px] w-full flex justify-center items-center px-5 hover:bg-white hover:text-[#0047AB] transition-all duration-300">Contactez-nous</a>
     
     </div>
 
     <!-- Hero Section -->
-    <div class="w-full relative">
+    <div class="w-full relative animate-on-scroll">
       <img class="w-full h-[120px] md:h-[183px] object-cover" alt="Hero image" src="assets/img/hero-image.png" />
       <div class="absolute inset-0 flex items-center justify-center">
         <h1 class="font-bold text-white text-4xl md:text-[64px] font-['Roboto']">SERVICES</h1>
@@ -81,19 +83,19 @@
     </div>
 
     <!-- Breadcrumb -->
-    <div class="flex gap-2 py-4 md:py-6 px-4 md:px-[127px]">
+    <div class="flex gap-2 py-4 md:py-6 px-4 md:px-[127px] animate-on-scroll float">
       <span class="font-normal text-[#8b8b8b] text-lg md:text-xl">Home &gt;</span>
       <span class="font-normal text-[#8b8b8b] text-lg md:text-xl">Services</span>
     </div>
 
     <!-- Our Services Section -->
     <section class="w-full bg-white py-8 md:py-16">
-      <h2 class="text-center font-semibold text-3xl md:text-[38.4px] mb-8 md:mb-16">NOS SERVICES</h2>
+      <h2 class="text-center font-semibold text-3xl md:text-[38.4px] mb-8 md:mb-16 animate-on-scroll">NOS SERVICES</h2>
 
       <!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-[118px]"> -->
         <div class="flex flex-wrap justify-evenly gap-6 px-4 md:px-[118px]">
         <!-- Service Cards -->
-        <div class="w-full md:w-[383px] h-[276px] overflow-hidden rounded-[10px] relative">
+        <div class="w-full md:w-[383px] h-[276px] overflow-hidden rounded-[10px] relative service-card-hover animate-on-scroll">
           <img src="assets/img/Rectangle 2.png" class="w-full h-full object-cover" alt="Service 1" />
           <div class="absolute bottom-0 w-full h-[67px] bg-[#0047abcc] rounded-[0px_0px_10px_10px] flex items-center justify-center gap-4">
             <img class="w-9 h-9" alt="Icon" src="assets/img/vector.svg" />
@@ -102,7 +104,7 @@
         </div>
         
         <!-- Service Cards -->
-        <div class="w-full md:w-[383px] h-[276px] overflow-hidden rounded-[10px] relative">
+        <div class="w-full md:w-[383px] h-[276px] overflow-hidden rounded-[10px] relative service-card-hover animate-on-scroll">
             <img src="assets/img/rectangle-2-5.svg" class="w-full h-full object-cover" alt="Service 1" />
             <div class="absolute bottom-0 w-full h-[67px] bg-[#0047abcc] rounded-[0px_0px_10px_10px] flex items-center justify-center gap-4">
               <img class="w-9 h-9" alt="Icon" src="assets/img/vector.svg" />
@@ -111,7 +113,7 @@
           </div>
 
         <!-- Service Cards -->
-        <div class="w-full md:w-[383px] h-[276px] overflow-hidden rounded-[10px] relative">
+        <div class="w-full md:w-[383px] h-[276px] overflow-hidden rounded-[10px] relative service-card-hover animate-on-scroll">
             <img src="assets/img/Rectangle 2 (2).png" class="w-full h-full object-cover" alt="Service 1" />
             <div class="absolute bottom-0 w-full h-[67px] bg-[#0047abcc] rounded-[0px_0px_10px_10px] flex items-center justify-center gap-4">
             <img class="w-9 h-9" alt="Icon" src="assets/img/vector.svg" />
@@ -120,7 +122,7 @@
         </div>
 
         <!-- Service Cards -->
-        <div class="w-full md:w-[383px] h-[276px] overflow-hidden rounded-[10px] relative">
+        <div class="w-full md:w-[383px] h-[276px] overflow-hidden rounded-[10px] relative service-card-hover animate-on-scroll">
             <img src="assets/img/Rectangle 2 (3).png" class="w-full h-full object-cover" alt="Service 1" />
             <div class="absolute bottom-0 w-full h-[67px] bg-[#0047abcc] rounded-[0px_0px_10px_10px] flex items-center justify-center gap-4">
             <img class="w-9 h-9" alt="Icon" src="assets/img/vector.svg" />
@@ -129,7 +131,7 @@
         </div>
 
         <!-- Service Cards -->
-        <div class="w-full md:w-[383px] h-[276px] overflow-hidden rounded-[10px] relative">
+        <div class="w-full md:w-[383px] h-[276px] overflow-hidden rounded-[10px] relative service-card-hover animate-on-scroll">
             <img src="assets/img/Rectangle 2 (4).png" class="w-full h-full object-cover" alt="Service 1" />
             <div class="absolute bottom-0 w-full h-[67px] bg-[#0047abcc] rounded-[0px_0px_10px_10px] flex items-center justify-center gap-4">
             <img class="w-9 h-9" alt="Icon" src="assets/img/vector.svg" />
@@ -142,7 +144,7 @@
     </section>
 
     <!-- We Offer Section -->
-    <section class="w-full bg-[#ececec] py-8 md:py-16 px-4 md:px-32">
+    <section class="w-full bg-[#ececec] py-8 md:py-16 px-4 md:px-32 animate-on-scroll">
       <h2 class="text-center font-semibold text-3xl md:text-[38.4px] mb-4 md:mb-6">NOUS OFFRONS</h2>
       
       <p class="text-center text-lg md:text-xl text-[#272727] max-w-[1002px] mx-auto mb-8 md:mb-12">
@@ -181,12 +183,12 @@
     </section>
 
     <!-- Recent Projects Section -->
-    <section class="w-full bg-white py-8 md:py-16">
+    <section class="w-full bg-white py-8 md:py-16 service-card-hover animate-on-scroll">
       <h2 class="text-center font-semibold text-3xl md:text-[38.4px] mb-8 md:mb-16">NOS DERNIÈRES RÉALISATIONS</h2>
 
       <div class="grid grid-cols-1 md:flex md:flex-wrap md:items-center md:justify-center gap-6 px-4 md:px-[118px]">
         <!-- Project Cards -->
-        <div class="w-full md:w-[383px] h-[276px] overflow-hidden rounded-[10px] relative">
+        <div class="w-full md:w-[383px] h-[276px] overflow-hidden rounded-[10px] relative service-card-hover animate-on-scroll">
           <img src="assets/img/Rectangle 2 (5).png" class="w-full h-full object-cover" alt="Project 1" />
           <div class="absolute bottom-0 w-full h-[67px] bg-[#0047abcc] rounded-[0px_0px_10px_10px] flex items-center justify-center">
             <div class="font-semibold text-white text-[15px] px-4">Pose des Chemin de câbles</div>
@@ -194,7 +196,7 @@
         </div>
 
         <!-- Project Cards -->
-        <div class="w-full md:w-[383px] h-[276px] overflow-hidden rounded-[10px] relative">
+        <div class="w-full md:w-[383px] h-[276px] overflow-hidden rounded-[10px] relative service-card-hover animate-on-scroll">
             <img src="assets/img/rectangle-2-2.svg" class="w-full h-full object-cover" alt="Project 1" />
             <div class="absolute bottom-0 w-full h-[67px] bg-[#0047abcc] rounded-[0px_0px_10px_10px] flex items-center justify-center">
               <div class="font-semibold text-white text-[15px] px-4">Câblages des tableaux et armoires électriques</div>
@@ -202,7 +204,7 @@
         </div>
 
         <!-- Project Cards -->
-        <div class="w-full md:w-[383px] h-[276px] overflow-hidden rounded-[10px] relative">
+        <div class="w-full md:w-[383px] h-[276px] overflow-hidden rounded-[10px] relative service-card-hover animate-on-scroll">
             <img src="assets/img/rectangle-2.svg" class="w-full h-full object-cover" alt="Project 1" />
             <div class="absolute bottom-0 w-full h-[67px] bg-[#0047abcc] rounded-[0px_0px_10px_10px] flex items-center justify-center">
               <div class="font-semibold text-white text-[15px] px-4">Câblages des groupes électrogènes et inverseurs 
@@ -211,7 +213,7 @@
         </div>
 
         <!-- Project Cards -->
-        <div class="w-full md:w-[383px] h-[276px] overflow-hidden rounded-[10px] relative">
+        <div class="w-full md:w-[383px] h-[276px] overflow-hidden rounded-[10px] relative service-card-hover animate-on-scroll">
             <img src="assets/img/rectangle-2-4.svg" class="w-full h-full object-cover" alt="Project 1" />
             <div class="absolute bottom-0 w-full h-[67px] bg-[#0047abcc] rounded-[0px_0px_10px_10px] flex items-center justify-center">
               <div class="font-semibold text-white text-[15px] px-4"> Câblages des armoires baies</div>
@@ -219,7 +221,7 @@
         </div>
 
         <!-- Project Cards -->
-        <div class="w-full md:w-[383px] h-[276px] overflow-hidden rounded-[10px] relative">
+        <div class="w-full md:w-[383px] h-[276px] overflow-hidden rounded-[10px] relative service-card-hover animate-on-scroll">
             <img src="assets/img/rectangle-2-3.svg" class="w-full h-full object-cover" alt="Project 1" />
             <div class="absolute bottom-0 w-full h-[67px] bg-[#0047abcc] rounded-[0px_0px_10px_10px] flex items-center justify-center">
               <div class="font-semibold text-white text-[15px] px-4">Câblage de Local technique courant faible</div>
@@ -227,7 +229,7 @@
         </div>
 
         <!-- Project Cards -->
-        <div class="w-full md:w-[383px] h-[276px] overflow-hidden rounded-[10px] relative">
+        <div class="w-full md:w-[383px] h-[276px] overflow-hidden rounded-[10px] relative service-card-hover animate-on-scroll">
             <img src="assets/img/rectangle-2-1.svg" class="w-full h-full object-cover" alt="Project 1" />
             <div class="absolute bottom-0 w-full h-[67px] bg-[#0047abcc] rounded-[0px_0px_10px_10px] flex items-center justify-center">
               <div class="font-semibold text-white text-[15px] px-4">Mise en place des échafaudages : Travaux en hauteur</div>
@@ -239,7 +241,7 @@
 
     <!-- Footer -->
     
-    <footer class="bg-[#293554] mt-[150px] py-12 text-white px-4 md:px-6 lg:px-0">
+    <footer class="bg-[#293554] mt-[150px] py-12 text-white px-4 md:px-6 lg:px-0 fadeIn">
         <div class="max-w-[1250px] mx-auto">
             <div class="flex flex-col md:flex-row justify-between gap-12 md:gap-6">
                 <!-- Company Info -->
