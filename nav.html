@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.PNG" />
+    <script src="assets/js/tailwindcss.js"></script>
+    <title >TSADEGA COMPANY</title>
+    <script src="assets/js/script_nav.js" defer></script>
+
+    <style>
+        *{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header class="h-[500vh]">
+        <div class="flex flex-row justify-around h-[88px] items-center">
+            <h1 class="text-[24px] text-[#0047AB] font-bold">
+                TSADEGA COMPANY
+            </h1>
+            <div class="flex flex-row justify-between md:w-1/2 lg:w-1/2 items-center gap-5">
+                <div class=" flex-row items-center hidden md:flex lg:flex" >
+                    <img src="assets/images/image_nav/marker_50px.png" class="w-[44px]" alt="marker">
+                    <div >
+                        <p class="text-[#8b8b8b] text-[15px] ">Rue Sebastien Essomba</p>
+                        <p class="text-[#0047ab] text-[15px]">Yaounde, Cameroun</p>
+                    </div>
+                </div>
+                <div class="flex flex-row items-center hidden md:flex lg:flex">
+                    <img src="assets/images/image_nav/phone_32px.png" class="w-[44px]" alt="phone">
+                    <div>
+                        <p class="text-[#8b8b8b] text-[15px]">Appelez-nous</p>
+                        <a href="+237699864576" class="text-[#0047ab] text-[15px]">+237(699864576)</a>
+                    </div>
+                </div>
+                <img id="menu" src="assets/images/image_nav/menu_50px.png" class="block md:hidden lg:hidden w-[30px]" alt="nav">
+                <a href="service.html" class=" duration-[.5s] border-[1.5px] border-[#0047ab] text-[#0047ab] text-[17px] px-[15px] py-[5px] font-medium rounded-[7px] hover:bg-[#0047AB] hover:text-white hidden md:block lg:block"> Services</a>
+            </div>
+        </div>
+        <nav class="w-full bg-[#0047AB] h-[48px] text-white  flex-row items-center gap-10 justify-center hidden md:flex lg:flex ">
+            
+            <a href="#" class="h-full flex items-center px-5 hover:bg-white hover:text-[#0047AB]">Accueil</a>
+            <a href="#" class="h-full flex items-center px-5 hover:bg-white hover:text-[#0047AB]">Services</a>
+            <a href="#" class="h-full flex items-center px-5 hover:bg-white hover:text-[#0047AB]">A propos</a>
+            <a href="#" class="h-full flex items-center px-5 hover:bg-white hover:text-[#0047AB]">Contactez-nous</a>
+
+        </nav>
+        <!-- sidbare -->
+        <div id="sidebar" class="sidebar hidden fixed flex w-full absolute top-0 py-5 text-white bg-[#0047AB] h-[100vh] shadow-xl flex-col items-center  md:hidden lg:hidden duration-[.2s]">
+            <div class="flex flex-row justify-between items-center px-5 w-full">
+                <h1 class="text-[24px] text-white font-bold">
+                    TSADEGA COMPANY
+                </h1>
+                <img id="removeSidebar" class= "w-[25px] " src="assets/images/image_nav/delete_48px.png" alt="">
+            </div>
+            <a href="#" class="h-[80px] w-full flex justify-center items-center px-5 hover:bg-white hover:text-[#0047AB]">Accueil</a>
+            <a href="#" class="h-[80px] w-full flex justify-center items-center px-5 hover:bg-white hover:text-[#0047AB]">Services</a>
+            <a href="#" class="h-[80px] w-full flex justify-center items-center px-5 hover:bg-white hover:text-[#0047AB]">A propos</a>
+            <a href="#" class="h-[80px] w-full flex justify-center items-center px-5 hover:bg-white hover:text-[#0047AB]">Contactez-nous</a>
+        
+        </div>
+    </header>
+    
+</body>
+</html>
