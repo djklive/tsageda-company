@@ -2,12 +2,279 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="config/tailwindcss.js"></script>
+    <link rel="icon" href="logo.PNG" />
+    <script src="assets/js/tailwindcss.js"></script>
+    <title >TSADEGA COMPANY</title>
+    <script src="assets/js/script.js " defer></script>
+
+    <script src="assets/js/script_nav.js" defer></script>
     <link rel="stylesheet" href="assets/css/styleIndex.css">
+
 </head>
-<body>
+<body class="bg-[#f5f5f5]">
+    <header class="bg-white" >
+        <div class="flex flex-row justify-around h-[88px] items-center">
+            <h1 class="text-[24px] text-[#0047AB] font-bold">
+                TSADEGA COMPANY
+            </h1>
+            <div class="flex flex-row justify-between md:w-1/2 lg:w-1/2 items-center gap-5">
+                <div class=" flex-row items-center hidden md:flex lg:flex" >
+                    <img src="assets/images/image_nav/marker_50px.png" class="w-[44px]" alt="marker">
+                    <div >
+                        <p class="text-[#8b8b8b] text-[15px] ">Rue Sebastien Essomba</p>
+                        <p class="text-[#0047ab] text-[15px]">Yaounde, Cameroun</p>
+                    </div>
+                </div>
+                <div class="flex flex-row items-center hidden md:flex lg:flex">
+                    <img src="assets/images/image_nav/phone_32px.png" class="w-[44px]" alt="phone">
+                    <div>
+                        <p class="text-[#8b8b8b] text-[15px]">Appelez-nous</p>
+                        <a href="+237699864576" class="text-[#0047ab] text-[15px]">+237(699864576)</a>
+                    </div>
+                </div>
+                <img id="menu" src="assets/images/image_nav/menu_50px.png" class="block md:hidden lg:hidden w-[30px]" alt="nav">
+                <a href="service.html" class=" duration-[.5s] border-[1.5px] border-[#0047ab] text-[#0047ab] text-[17px] px-[15px] py-[5px] font-medium rounded-[7px] hover:bg-[#0047AB] hover:text-white hidden md:block lg:block"> Services</a>
+            </div>
+        </div>
+        <nav class="w-full bg-[#0047AB] h-[48px] text-white  flex-row items-center gap-10 justify-around hidden md:flex lg:flex z-[20]">
+            
+           <div class="flex h-full flex-row items-center gap-10 justify-center">
+                <a href="index.html" class="h-full flex items-center px-5 hover:bg-white hover:text-[#0047AB]">Accueil</a>
+                <a href="service.html" class="h-full flex items-center px-5 hover:bg-white hover:text-[#0047AB]">Services</a>
+                <a href="Apropos.html" class="h-full flex items-center px-5 hover:bg-white hover:text-[#0047AB]">A propos</a>
+                <a href="Contact.html" class="h-full flex items-center px-5 hover:bg-white hover:text-[#0047AB]">Contactez-nous</a>
+           </div>
+            <img src="assets/images/image_nav/search_50px.png" class=" w-[30px]" alt="">
+        </nav>
+        <!-- sidbare -->
+        <div id="sidebar" class="sidebar z-40  hidden fixed flex w-full absolute top-0 py-5 text-white bg-[#0047AB] h-[100vh] shadow-xl flex-col items-center  md:hidden lg:hidden duration-[.2s]">
+            <div class="flex flex-row justify-between items-center px-5 w-full">
+                <h1 class="text-[24px] text-white font-bold">
+                    TSADEGA COMPANY
+                </h1>
+                <img id="removeSidebar" class= "w-[25px] " src="assets/images/image_nav/delete_48px.png" alt="">
+            </div>
+            <a href="index.html" class="h-[80px] w-full flex justify-center items-center px-5 hover:bg-white hover:text-[#0047AB]">Accueil</a>
+            <a href="service.html" class="h-[80px] w-full flex justify-center items-center px-5 hover:bg-white hover:text-[#0047AB]">Services</a>
+            <a href="Apropos.html" class="h-[80px] w-full flex justify-center items-center px-5 hover:bg-white hover:text-[#0047AB]">A propos</a>
+            <a href="Contact.html" class="h-[80px] w-full flex justify-center items-center px-5 hover:bg-white hover:text-[#0047AB]">Contactez-nous</a>
+        
+        </div>
+        <div class="h-screen bg-[url('assets/images/image_accueil/accueil.png')] bg-cover bg-center">
+            <div class=" text-white w-full h-full flex flex-col justify-center pl-20 gap-5">
+                <h1 class="text-[300%] font-bold">L'EXPERTISE ELECTRIQUE</h1>
+                <p class="text-[32px]">Nous sommes un service au quel vous pouvez faire confiance</p>
+                <a href="Contact.html" class="bg-[#ffe248] w-[192px]  h-[47px] flex flex-row justify-center items-center text-[22px] font-bold text-[#3a3831] rounded-md hover:bg-[#ffe2aa]">Contactez-nous</a>
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <section class="flex flex-col justify-center items-center px-[30px] p-[100px] h-max gap-10 md:flex-row lg:flex-row">
+            <img src="assets/images/image_accueil/boss.png" class="rounded-xl md:hidden lg:hidden" alt="">
+            <div id="cote_droit_section1" class="flex flex-col gap-5  md:w-1/2 lg:w-1/2">
+                <h1 class="text-[40px] font-bold">QUI SOMMES-NOUS ?</h1>
+                <p class="text-justify " ><span class="text-[15px] text-[#0047AB] font-bold">TSADEGA COMPANY</span> est un établissement qui a été créé le 14 mars 1995 par son promoteur
+                    Monsieur Eric Gaétan TSAFACK, sur la base d’un projet de société très objectif.
+                    <br><br>L’établissement TSADEGA COMPANY a connu au départ un ensemble d’activités pour la plupart
+                    essentiellement centrées sur les prestations de services relevant du domaine des installations
+                    électriques domestique et tertiaire....
+                </p>
+                <a href="#" class="w-[192px] h-[47px] bg-[#0047AB] rounded-xl text-white text-[22px] flex flex-col justify-center items-center hover:bg-[#003380]">En savoir plus</a>
+            </div>
+            <div id="cote_gauche_section1" class=" overChef1 [421px] h-[360px ] bg-black rounded-xl relative">
+                <img src="assets/images/image_accueil/boss.png"  class="relative rounded-xl hidden md:block lg:block" alt="">
+                <div class="overChef text-white flex flex-row justify-center items-center gap-5 top-0 absolute rounded-xl bg-[#000000bb] w-full h-full">
+                    <img src="assets/images/image_accueil/permanent_job_50px.png" alt="">
+                    <div>
+                        <p>Fondateur Monsieur </p>
+                        <p class="text-[#ffe248]">Eric Gaétan TSAFACK</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <section id="haut_section2" class=" bg-white flex flex-col  justify-center items-center px-[30px] p-[100px] h-max gap-10">
+            <h1 class="text-[40px]">Nos services</h1>
+            <div class="flex flex-row flex-wrap justify-center  items-center gap-12 text-white">
+                
+                <div class="over1  w-[300px] h-[188px] bg-[url('assets/images/image_accueil/service1.png')] rounded-xl relative z-[1]">
+                    
+                   <div class="over absolute text-center w-full p-3 bg-[#0047ABb2] rounded-xl duration-[.9s] ">
+                        <div class="flex flex-rows items-center justify-center gap-5   ">
+                            <img src="assets/images/image_accueil/Vector.png" alt="">
+                            <p>Etudes Technique</p>
+                        </div>
+                   </div>
+                </div>
+                <div class="over1  w-[300px] h-[188px] bg-[url('assets/images/image_accueil/service2.png')] rounded-xl relative z-[1]">
+                    
+                    <div class="over absolute text-center w-full p-3 bg-[#0047ABb2] rounded-xl duration-[.9s] ">
+                         <div class="flex flex-rows items-center justify-center gap-5   ">
+                             <img src="assets/images/image_accueil/Vector.png" alt="">
+                             <p>Realisation des travaux</p>
+                         </div>
+                    </div>
+                 </div>
+                 <div class="over1 w-[300px] h-[188px] bg-[url('assets/images/image_accueil/service3.png')] rounded-xl relative z-[1]">
+                    
+                    <div class="over absolute text-center w-full p-3 bg-[#0047ABb2] rounded-xl duration-[.9s] ">
+                         <div class="flex flex-rows items-center justify-center gap-5   ">
+                             <img src="assets/images/image_accueil/Vector.png" alt="">
+                             <p>Maitrise d'oeuvre</p>
+                         </div>
+                    </div>
+                 </div>
+                 <div class="over1 w-[300px] h-[188px] bg-[url('assets/images/image_accueil/service3.png')] rounded-xl relative z-[1]">
+                    
+                    <div class="over absolute  text-center w-full p-3 bg-[#0047ABb2] rounded-xl duration-[.9s] ">
+                         <div class="flex flex-rows items-center justify-center gap-5   ">
+                             <img src="assets/images/image_accueil/Vector.png" alt="">
+                             <p>Conseils</p>
+                         </div>
+                    </div>
+                 </div>
+                 <div class="over1 w-[300px] h-[188px] bg-[url('assets/images/image_accueil/service3.png')] rounded-xl relative z-[1] duration-[.5s]">
+                    
+                    <div class=" over absolute  text-center w-full p-3  bg-[#0047ABb2] rounded-xl  duration-[.9s] ">
+                         <div class=" flex flex-rows items-center justify-center gap-2   ">
+                             <img src="assets/images/image_accueil/Vector.png" alt="">
+                             <p>Maintenance/Entretien/Réparation</p>
+                         </div>
+                    </div>
+                 </div>
+            </div>
+        </section>
+        <section class="flex flex-col justify-center items-center px-[30px] p-[100px] h-max gap-10">
+           <h1 class="text-[40px] font-medium">NOUS OFFRONS</h1>
+           <p>Nous offrons une gamme complète de services rentables pour les propriétés residentielles et commerciales</p>
+           <div class="flex flex-col items-center justify-center gap-10 lg:flex-row md:flex-row" >
+                <div class="flex flex-col items-center gap-5">
+                    <img src="assets/images/image_accueil/Group.png" alt="">
+                    <p>ELECTRONIQUE</p>
+                    <p class="w-2/3 text-center ">Nous fournissons des services électronique de pointes, alliant innovation et expertise pour repondre a vos besions avec fiabilité</p>
+
+                </div>
+                <div class="flex flex-col items-center gap-5">
+                    <img src="assets/images/image_accueil/ic_outline-electric-meter.png" alt="">
+                    <p>ELECTRICITE</p>
+                    <p class="w-2/3 text-center ">Nous proposons des solutions électriques fiables et innovantes, adaptées aux besions résidentiels, commerciaux et industriels</p>
+                </div>
+                <div class="flex flex-col items-center gap-5">
+                    <img src="assets/images/image_accueil/icons8_electrical.png" alt="">
+                    <p>INFORMATIQUE</p>
+                    <p class="w-2/3 text-center ">Nous assurons des services informatiques essentels, incluant la configuration, le dépannage et la gestion de systèmes</p>
+                </div>
+           </div>
+        </section>
+        <section class="flex flex-col bg-[#0047AB] text-white justify-center items-center px-[30px] p-[100px] h-max gap-10">
+            
+            <p class="text-2xl">Existe deja depuis </p><span class="text-[100px] font-bold md:hidden lg:hidden">30 ans</span><span id="span" class="text-[100px] font-bold hidden md:block lg:block">0</span>
+             
+         </section>
+        <section id="haut_section5" class="flex flex-col bg-white justify-center items-center px-[30px] p-[100px] h-max gap-10 ">
+           <h1 class="text-[40px] font-medium">NOS CLIENTS</h1>
+           <div class="flex flex-col gap-5 md:flex-row lg:flex-row" >
+                <div class="border-[#8b8b8b] border-[2px] flex flex-col p-4 rounded-xl gap-5  hover:border-[0px] hover:bg-[#0047AB] hover:text-white duration-[1s]">
+                    <p >
+                        Grace à leur expertise électrique, notre maison est désormais parfaitement éclairée et sécurisée. Une équipe professionnelle, rapide et attentive à nos besions. Nous sommes ravis du résultat final
+
+                    </p>
+                    <div class="flex flex-row gap-2 items-center">
+                        <img src="assets/images/image_accueil/téléchargement (4).png" alt="">
+                        <div>
+                            <h1 class="text-[20px] font-bold">Alain Tamo</h1>
+                            <p class="italic text-[#8b8b8b]">Douala,Cameroun</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="border-[#8b8b8b] border-[2px] flex flex-col p-4 rounded-xl gap-5 hover:border-[0px] hover:bg-[#0047AB] hover:text-white duration-[1s]">
+                    <p >
+                        Grace à leur expertise électrique, notre maison est désormais parfaitement éclairée et sécurisée. Une équipe professionnelle, rapide et attentive à nos besions. Nous sommes ravis du résultat final
+
+                    </p>
+                    <div class="flex flex-row gap-2 items-center">
+                        <img src="assets/images/image_accueil/Ellipse 2.png" alt="">
+                        <div>
+                            <h1 class="text-[20px] font-bold">Jean Bernard</h1>
+                            <p class="italic text-[#8b8b8b]">Yaounde,Cameroun</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-[#8b8b8b] border-[2px] flex flex-col p-4 rounded-xl gap-5  hover:border-[0px] hover:bg-[#0047AB] hover:text-white duration-[1s]">
+                    <p >
+                        Grace à leur expertise électrique, notre maison est désormais parfaitement éclairée et sécurisée. Une équipe professionnelle, rapide et attentive à nos besions. Nous sommes ravis du résultat final
+
+                    </p>
+                    <div class="flex flex-row gap-2 items-center">
+                        <img src="assets/images/image_accueil/téléchargement (3) (1).png" alt="">
+                        <div>
+                            <h1 class="text-[20px] font-bold">Sylvain Kenfack</h1>
+                            <p class="italic text-[#8b8b8b]">Yaounde,Cameroun</p>
+                        </div>
+                    </div>
+                </div>
+           </div>
+            
+        </section>
+        
+    </main>
+
+    <!-- start footer section -->
+    
+
+    <footer class="bg-[#293554] py-12 text-white px-4 md:px-6 lg:px-0">
+        <div class="max-w-[1250px] mx-auto">
+            <div class="flex flex-col md:flex-row justify-between gap-12 md:gap-6">
+                <div class="w-full md:w-1/2 lg:w-1/3 px-0 md:px-4 relative">
+                    <div class="absolute inset-0 bg-[url('assets/images/pngwing\ 1.png')] bg-no-repeat bg-contain opacity-10"></div>
+                    <div class="relative z-10 contact">
+                        <h2 class="uppercase text-3xl sm:text-4xl lg:text-5xl mb-6 lg:mb-8">tsadega compagny</h2>
+                        <p class="leading-relaxed text-sm sm:text-base">
+                            L'expertise électrique <br><br>
+        
+                            6886, Rue Sebastien Essomba Yaoundé ,, Cameroun <br>
+                            tsadegacompany2004@yahoo.fr <br>
+                            (237) 699864576/ 699819604 <br>
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/3 px-0 md:px-4 flex flex-col gap-2">
+                    <h3 class="text-xl sm:text-2xl mb-4">Explore</h3>
+                    <a href="#" class="text-white font-medium text-base sm:text-lg hover:text-[#0047AB] transition-colors">Home</a>
+                    <a href="#" class="text-white font-medium text-base sm:text-lg hover:text-[#0047AB] transition-colors">Service</a>
+                    <a href="#" class="text-white font-medium text-base sm:text-lg hover:text-[#0047AB] transition-colors">Contact Us</a>
+                    <a href="#" class="text-white font-medium text-base sm:text-lg hover:text-[#0047AB] transition-colors">About Us</a>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/3 px-0 md:px-4">
+                    <h3 class="text-xl sm:text-2xl mb-4">Newsletter</h3>
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-0">
+                        <input type="email" 
+                               placeholder="Votre email" 
+                               class="w-full sm:w-auto border-none bg-white text-black px-4 sm:px-6 md:px-3 lg:px-4 py-2 sm:py-3 rounded-md sm:rounded-r-none" 
+                               aria-label="Email pour newsletter">
+                        <button type="submit" 
+                                class="w-full sm:w-auto bg-[#0047AB] text-white px-4 sm:px-5 md:px-2.5 lg:px-4 py-2 sm:py-3 text-lg sm:text-xl rounded-md sm:rounded-l-none hover:bg-[#003380] transition-colors">
+                            Souscrire
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="border-t border-black py-2.5">
+        <div class="flex justify-center items-center p-4">
+            <p class="text-[#bbbbbb] text-center text-sm sm:text-base">
+                Tsadega Company &copy; 2025 by <span class="text-[#0047AB] inline-block">DFK TECH</span> | all rights reserved!
+            </p>
+        </div>
+    </div>
+
+    <!-- end footer section -->
     
 </body>
 </html>
