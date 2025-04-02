@@ -12,17 +12,17 @@
     <script src="assets/js/scriptservice.js" defer></script>
     <script src="assets/js/script_nav.js" defer></script>
   </head>
-  <body class="bg-[#ececec]">
+  <body class="bg-[#f5f5f5]">
     <!-- Header -->
-    <header class=" bg-white flex flex-row md:flex-row items-center justify-around p-4 md:h-[88px] animate-on-scroll fadeIn">
-      <div class="font-bold text-[#0047ab] text-2xl hover-scale">
+    <header class="bg-white flex flex-row md:flex-row items-center justify-around p-4 md:h-[88px] animate-on-scroll header-scroll">
+      <div class="font-bold text-[#0047ab] text-[24px] hover-scale title-focus">
         TSADEGA COMPANY
       </div>
 
-      <div class="flex flex-rox md:flex-row items-center gap-4 md:gap-8">
-        <div class="flex items-center hidden md:flex lg:flex hover-scale">
+      <div class="flex flex-rox md:flex-row items-center gap-5 md:gap-8">
+        <div class="flex items-center hidden md:flex lg:flex hover-scale animate-on-scroll" data-delay="100">
           <div class="w-[43px] h-[43px]">
-            <img class="w-[44px] h-10 mt-0.5 ml-[9px]" alt="Location icon" src="assets/images/image_nav/marker_50px.png" />
+            <img class="w-[44px] h-10 mt-0.5 ml-[9px] icon-float" alt="Location icon" src="assets/images/image_nav/marker_50px.png" />
           </div>
           <div class="ml-1">
             <div class="font-medium text-[#8b8b8b] text-[15px]">Rue Sebastien Essomba,</div>
@@ -30,8 +30,8 @@
           </div>
         </div>
 
-        <div class="flex items-center hidden md:flex lg:flex md:mr-4 lg:mr-4 hover-scale">
-          <img class="w-11 h-11" alt="Phone icon" src="assets/img/cil-mobile.svg" />
+        <div class="flex items-center hidden md:flex lg:flex md:mr-4 lg:mr-4 hover-scale animate-on-scroll" data-delay="200">
+          <img class="w-11 h-11 icon-pulse" alt="Phone icon" src="assets/img/cil-mobile.svg" />
           <div class="ml-1">
             <div class="font-medium text-[#8b8b8b] text-[15px]">Appelez-nous</div>
             <div class="font-medium text-[#0047ab] text-[15px]">+237(699864576)</div>
@@ -40,38 +40,36 @@
 
         <img id="menu" src="assets/images/image_nav/menu_50px.png" class="block md:hidden lg:hidden w-[30px] hover-scale" alt="nav">
 
-        <button class="w-full md:w-[210px] h-12 rounded-[10px] border-[1.5px] border-[#0047ab] text-[#0047ab] font-bold text-2xl hidden md:block lg:block hover:bg-[#0047ab] hover:text-white transition-all duration-300">
-          Services
+        <button class="transition-all duration-300 animate-on-scroll" data-delay="300">
+          <a href="service.html" class=" duration-[.5s] border-[1.5px] border-[#0047ab] text-[#0047ab] text-[17px] px-[15px] py-[5px] font-medium rounded-[7px] hover:bg-[#0047AB] hover:text-white hidden md:block lg:block"> Services</a>
         </button>
       </div>
     </header>
 
     <!-- Navigation -->
-    <nav class="w-full bg-[#0047ab] flex flex-col md:flex-row items-center p-5 md:px-[129px] md:h-12 space-y-4 md:space-y-0 justify-between hidden md:flex lg:flex z-50 animate-on-scroll fadeIn slideIn">
-      <div class="flex flex-col md:flex-row gap-4 md:gap-8 text-center">
-        <a href="#" class="h-full font-normal text-white text-xl px-5 py-5 hover:bg-white hover:text-[#0047AB] transition-all duration-300">Accueil</a>
-        <a href="#" class="h-full font-normal text-white text-xl px-5 py-5 hover:bg-white hover:text-[#0047AB] transition-all duration-300">Services</a>
-        <a href="#" class="h-full font-normal text-white text-xl px-5 py-5 hover:bg-white hover:text-[#0047AB] transition-all duration-300">A Propos</a>
-        <a href="#" class="h-full font-normal text-white text-xl px-5 py-5 hover:bg-white hover:text-[#0047AB] transition-all duration-300">Contactez-nous</a>
+    <nav class="w-full bg-[#0047AB] h-[48px] text-white  flex-row items-center gap-10 justify-around hidden md:flex lg:flex z-[20]">
+            
+      <div class="flex h-full flex-row items-center gap-10 justify-center">
+           <a href="index.html" class="h-full flex items-center px-5 hover:bg-white hover:text-[#0047AB]">Accueil</a>
+           <a href="service.html" class="h-full flex items-center px-5 hover:bg-white hover:text-[#0047AB]">Services</a>
+           <a href="Apropos.html" class="h-full flex items-center px-5 hover:bg-white hover:text-[#0047AB]">A propos</a>
+           <a href="Contact.html" class="h-full flex items-center px-5 hover:bg-white hover:text-[#0047AB]">Contactez-nous</a>
       </div>
-      <div class="flex items-center">
-        <img src="assets/img/bx-search.svg" class="w-7 h-7 hover-scale" alt="Search" />
-      </div>
-    </nav>
+       <img src="assets/images/image_nav/search_50px.png" class=" w-[30px]" alt="">
+   </nav>
 
     <!-- sidbare -->
-    <div id="sidebar" class="sidebar hidden fixed flex w-full absolute top-0 py-5 text-white bg-[#0047AB] h-[100vh] shadow-xl flex-col items-center  md:hidden lg:hidden duration-[.2s] z-50">
+    <div id="sidebar" class="sidebar hidden fixed flex w-full absolute top-0 py-5 text-white bg-[#0047AB] h-[100vh] shadow-xl flex-col items-center md:hidden lg:hidden duration-[.2s] z-50">
         <div class="flex flex-row justify-between items-center px-5 w-full">
-            <h1 class="text-[24px] text-white font-bold hover-scale">
+            <h1 class="text-[24px] text-white font-bold hover-scale title-focus">
                 TSADEGA COMPANY
             </h1>
             <img id="removeSidebar" class= "w-[25px] hover-scale" src="assets/images/image_nav/delete_48px.png" alt="">
         </div>
-        <a href="#" class="h-[80px] w-full flex justify-center items-center px-5 hover:bg-white hover:text-[#0047AB] transition-all duration-300">Accueil</a>
-        <a href="#" class="h-[80px] w-full flex justify-center items-center px-5 hover:bg-white hover:text-[#0047AB] transition-all duration-300">Services</a>
-        <a href="#" class="h-[80px] w-full flex justify-center items-center px-5 hover:bg-white hover:text-[#0047AB] transition-all duration-300">A propos</a>
-        <a href="#" class="h-[80px] w-full flex justify-center items-center px-5 hover:bg-white hover:text-[#0047AB] transition-all duration-300">Contactez-nous</a>
-    
+        <a href="index.html" class="h-[80px] w-full flex justify-center items-center px-5 hover:bg-white hover:text-[#0047AB] transition-all duration-300">Accueil</a>
+        <a href="service.html" class="h-[80px] w-full flex justify-center items-center px-5 hover:bg-white hover:text-[#0047AB] transition-all duration-300">Services</a>
+        <a href="contact.html" class="h-[80px] w-full flex justify-center items-center px-5 hover:bg-white hover:text-[#0047AB] transition-all duration-300">A propos</a>
+        <a href="contact.html" class="h-[80px] w-full flex justify-center items-center px-5 hover:bg-white hover:text-[#0047AB] transition-all duration-300">Contactez-nous</a>
     </div>
 
     <!-- Hero Section -->
