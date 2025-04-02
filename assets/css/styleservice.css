@@ -20,6 +20,15 @@
     }
   }
   
+  @keyframes slideRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
   @keyframes scaleIn {
     from {
       transform: scale(0.9);
@@ -43,6 +52,41 @@
     }
   }
   
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes rotateIn {
+    from {
+      transform: rotate(-10deg) scale(0.9);
+      opacity: 0;
+    }
+    to {
+      transform: rotate(0) scale(1);
+      opacity: 1;
+    }
+  }
+  
   /* Animate on scroll utility classes */
   .animate-on-scroll {
     opacity: 0;
@@ -55,6 +99,58 @@
     transform: translateY(0);
   }
   
+  /* Section animations */
+  .section-hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+  }
+  
+  .section-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Animation variants */
+  .fade-left {
+    transform: translateX(-50px);
+  }
+  
+  .fade-right {
+    transform: translateX(50px);
+  }
+  
+  .fade-up {
+    transform: translateY(50px);
+  }
+  
+  .fade-down {
+    transform: translateY(-50px);
+  }
+  
+  .scale-in {
+    transform: scale(0.8);
+  }
+  
+  .rotate-in {
+    transform: rotate(-10deg) scale(0.9);
+  }
+  
+  /* Animation pour le header et la navigation fixe */
+  .header-scroll {
+    transition: all 0.3s ease;
+  }
+  
+  .header-scroll.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  
   /* Custom animations */
   .hover-scale {
     transition: transform 0.3s ease;
@@ -65,7 +161,7 @@
   }
   
   .service-card-hover {
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
   }
   
   .service-card-hover:hover {
@@ -93,6 +189,57 @@
     left: 0;
   }
   
+  /* Animations de couleur au survol */
+  .text-hover-effect {
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .text-hover-effect:hover {
+    color: #0047AB;
+  }
+  
+  .text-hover-effect::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #0047AB;
+    transition: width 0.3s ease;
+  }
+  
+  .text-hover-effect:hover::after {
+    width: 100%;
+  }
+  
+  /* Animation pour les images */
+  .img-hover-zoom {
+    overflow: hidden;
+  }
+  
+  .img-hover-zoom img {
+    transition: transform 0.5s ease;
+  }
+  
+  .img-hover-zoom:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Animations pour les icônes */
+  .icon-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .icon-pulse {
+    animation: pulse 2s ease-in-out infinite;
+  }
+  
+  .icon-bounce {
+    animation: bounce 2s ease-in-out infinite;
+  }
+  
   /* Sidebar animation */
   .sidebar {
     transition: transform 0.3s ease-in-out;
@@ -104,4 +251,71 @@
   
   .sidebar:not(.active) {
     transform: translateX(-100%);
+  }
+  
+  /* Animation pour les titres */
+  .title-focus {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .title-focus::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 5px;
+    bottom: -5px;
+    left: 50%;
+    background-color: #0047AB;
+    transition: all 0.3s ease;
+  }
+  
+  .title-focus:hover::before {
+    width: 100%;
+    left: 0;
+  }
+  
+  /* Effet de tracking pour le curseur */
+  .cursor-follow {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .cursor-follow::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 71, 171, 0.2);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .cursor-follow:hover::after {
+    opacity: 1;
+  }
+  
+  /* Animation pour le footer */
+  .footer-link {
+    position: relative;
+    transition: all 0.6s ease;
+  }
+  
+  .footer-link::before {
+    content: '→';
+    position: absolute;
+    left: -15px;
+    opacity: 0;
+    transition: all 0.6s ease;
+  }
+  
+  .footer-link:hover {
+    padding-left: 15px;
+  }
+  
+  .footer-link:hover::before {
+    opacity: 1;
   }
