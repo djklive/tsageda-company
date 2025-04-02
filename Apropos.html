@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSADEGA COMPANY</title>
+    <script src="assets/js/tailwindcss.js"></script>
+    <link rel="stylesheet" href="assets/css/styleIndex.css">
+    <link rel="stylesheet" href="assets/css/styleservice.css">
+    <script src="assets/js/scriptservice.js" defer></script>
+    <link rel="icon" href="logo.PNG" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,600" rel="stylesheet">
+</head>
+<body class="bg-[#ececec]">
+    <!-- Header -->
+    <header class="bg-white flex flex-row md:flex-row items-center justify-around p-4 md:h-[88px] animate-on-scroll header-scroll">
+        <div class="font-bold text-[#0047ab] text-[24px] hover-scale title-focus">
+          TSADEGA COMPANY
+        </div>
+  
+        <div class="flex flex-rox md:flex-row items-center gap-5 md:gap-8">
+          <div class="flex items-center hidden md:flex lg:flex hover-scale animate-on-scroll" data-delay="100">
+            <div class="w-[43px] h-[43px]">
+              <img class="w-[44px] h-10 mt-0.5 ml-[9px] icon-float" alt="Location icon" src="assets/images/image_nav/marker_50px.png" />
+            </div>
+            <div class="ml-1">
+              <div class="font-medium text-[#8b8b8b] text-[15px]">Rue Sebastien Essomba,</div>
+              <div class="font-medium text-[#0047ab] text-[15px]">Yaoundé, Cameroun</div>
+            </div>
+          </div>
+  
+          <div class="flex items-center hidden md:flex lg:flex md:mr-4 lg:mr-4 hover-scale animate-on-scroll" data-delay="200">
+            <img class="w-11 h-11 icon-pulse" alt="Phone icon" src="assets/img/cil-mobile.svg" />
+            <div class="ml-1">
+              <div class="font-medium text-[#8b8b8b] text-[15px]">Appelez-nous</div>
+              <div class="font-medium text-[#0047ab] text-[15px]">+237(699864576)</div>
+            </div>
+          </div>
+  
+          <img id="menu" src="assets/images/image_nav/menu_50px.png" class="block md:hidden lg:hidden w-[30px] hover-scale" alt="nav">
+  
+          <button class="transition-all duration-300 animate-on-scroll" data-delay="300">
+            <a href="service.html" class=" duration-[.5s] border-[1.5px] border-[#0047ab] text-[#0047ab] text-[17px] px-[15px] py-[5px] font-medium rounded-[7px] hover:bg-[#0047AB] hover:text-white hidden md:block lg:block"> Services</a>
+          </button>
+        </div>
+      </header>
+  
+      <!-- Navigation -->
+      <nav class="w-full bg-[#0047AB] h-[48px] text-white  flex-row items-center gap-10 justify-around hidden md:flex lg:flex z-[20]">
+              
+        <div class="flex h-full flex-row items-center gap-10 justify-center">
+             <a href="index.html" class="h-full flex items-center px-5 hover:bg-white hover:text-[#0047AB]">Accueil</a>
+             <a href="service.html" class="h-full flex items-center px-5 hover:bg-white hover:text-[#0047AB]">Services</a>
+             <a href="Apropos.html" class="h-full flex items-center px-5 hover:bg-white hover:text-[#0047AB]">A propos</a>
+             <a href="Contact.html" class="h-full flex items-center px-5 hover:bg-white hover:text-[#0047AB]">Contactez-nous</a>
+        </div>
+         <img src="assets/images/image_nav/search_50px.png" class=" w-[30px]" alt="">
+     </nav>
+  
+      <!-- sidbare -->
+      <div id="sidebar" class="sidebar hidden fixed flex w-full absolute top-0 py-5 text-white bg-[#0047AB] h-[100vh] shadow-xl flex-col items-center md:hidden lg:hidden duration-[.2s] z-50">
+          <div class="flex flex-row justify-between items-center px-5 w-full">
+              <h1 class="text-[24px] text-white font-bold hover-scale title-focus">
+                  TSADEGA COMPANY
+              </h1>
+              <img id="removeSidebar" class= "w-[25px] hover-scale" src="assets/images/image_nav/delete_48px.png" alt="">
+          </div>
+          <a href="index.html" class="h-[80px] w-full flex justify-center items-center px-5 hover:bg-white hover:text-[#0047AB] transition-all duration-300">Accueil</a>
+          <a href="service.html" class="h-[80px] w-full flex justify-center items-center px-5 hover:bg-white hover:text-[#0047AB] transition-all duration-300">Services</a>
+          <a href="Apropos.html" class="h-[80px] w-full flex justify-center items-center px-5 hover:bg-white hover:text-[#0047AB] transition-all duration-300">A propos</a>
+          <a href="contact.html" class="h-[80px] w-full flex justify-center items-center px-5 hover:bg-white hover:text-[#0047AB] transition-all duration-300">Contactez-nous</a>
+      </div>
+
+    <!-- Hero Section -->
+    <div class="w-full relative animate-on-scroll cursor-follow">
+        <img class="w-full h-[120px] md:h-[183px] object-cover" alt="Hero image" src="assets/img/Hero a propos.png" />
+        <div class="absolute inset-0 flex items-center justify-center">
+          <h1 class="font-bold text-white text-4xl md:text-[64px] font-['Roboto'] animate-on-scroll scale-in">A PROPOS DE NOUS</h1>
+        </div>
+      </div>
+  
+      <!-- Breadcrumb -->
+      <div class="flex gap-2 py-4 md:py-6 px-4 md:px-[127px] animate-on-scroll">
+        <span class="font-normal text-[#8b8b8b] text-lg md:text-xl text-hover-effect"><a href="index.html">Home</a> &gt;</span>
+        <span class="font-normal text-[#8b8b8b] text-lg md:text-xl text-hover-effect"><a href="index.html">About</a> </span>
+      </div>
+
+    <!-- Main Content -->
+    <main class="p-4 md:p-8">
+        <div class="flex flex-wrap gap-8">
+            <img src="assets/img/membre.png" alt="Company Image" class="w-full md:w-[491px] h-auto object-cover rounded-lg">
+            
+            <div class="flex-1">
+                <h2 class="text-3xl md:text-4xl font-semibold mb-6">Bienvenue à TSADEGA COMPANY</h2>
+                <p class="text-[#272727] text-lg leading-relaxed text-justify">
+                    TSADEGA COMPANY est un établissement qui a été créé le 14 mars 1995 par son promoteur Monsieur Eric Gaétan TSAFACK, sur la base d'un projet de société très objectif. L'établissement TSADEGA COMPANY a connu au départ un ensemble d'activités pour la plupart essentiellement centrées sur les prestations de services relevant du domaine des installations électriques domestiques et tertiaires. 
+                    Ces travaux, qui étaient effectués avec rigueur dans le respect des normes et des prescriptions tecnologiques ont permis à TSADEGA COMPANY de connaitre une évolution exponentielle de ces activités avec à la clé, la création des emplois. Dans le souci de la diversification de ses activités, aux fins de mieux s'adapter aux opportunités offertes par les offres de marchés, les départements électronique et informatiqueont ensuite étécréés. 
+                </p>
+            </div>
+        </div>
+        <div class="mt-4">
+            <p class="text-justify">En 1998, l'établissement TSADEGA COMPANY a ouvert la section «FormationProfessionnelle» pour lesTechniciens deMaintenance et pour lesSecrétairesBureautiques. Deux ans plus tard,en 2000, leCentre deFormationProfessionnelle TSADEGA COMPANY a été agrée par le Fonds National de l'Emploi (FNE). Lepartenariat FNE–TSADEGACOMPANY aététrèsfructueux. En 2007, le Ministère de l'Emploi et de la FormationProfessionnelle (MINEFOP) a reconnu les exploits de TSADEGA COMPANY et a signé son agrément, pour faire de lui un véritable Pool de la formation professionnelle qualifianteau Cameroun.</p> <br><br>
+
+            <p class="text-justify">
+                De nombreux Techniciens de Maintenance, ainsi que de nombreusesSecrétaires deBureau ont été forméavec briopar le personnel qualifiéet compétantde TSADEGA COMPANY, puis ils ontensuiteétésystématiquement insérés en emploissalariésou indépendants. <br>
+            Pendant plus d'une décennie, la section «Formation Professionnelle» a constitué les 60% des activités de l'établissement TSADEGA COMPANY. En 2010 le promoteur Monsieur Eric Gaétan TSAFACK, qui est en outre un Ingénieur en Electrotechnique, est toujours trèsmotivépar l'idée de la croissance de son business. C'est ainsi quedans le cadre duprojet de redynamisationde l'établissement,un Bureau d'Etudes Techniques(l'électricitéCourant Fort)a étéouvert. <br> <br> <br>
+            </p>
+
+
+            Quelques années plus tard, les engagementset les mérites du Bureau d'études techniquesde TSADEGA COMPANY furent récompensés par l'octroi de plusieurs marchés où l'intensité de courantélectriquepouvaitêtrede l'ordrede800A(BâtimentsPublics; Immeubles de Grande Hauteur;Unités industrielles;Hôtels; Ecoles; Supermarchés etc.). <br> <br>
+
+            Le domaine des Sources Secours d'énergie fut également un volet important dans les activités de TSADEGA COMPANY.Le suivi des formations professionnelles pour le renforcement des capacités relatives aux techniques d'installation et d'entretien des Groupes Electrogènes (jusqu'à1000KVA)a permis lamaîtrise puis ledéveloppement de cet autre branche dugénie électriqueau sein de l'établissement.En 2014, Cela a valules signaturesd'importantscontrats de sous-traitance, ainsi que des multiples contrats de maintenance. <br> <br>
+
+            L'ensemble deses partenariatsde confiance,ainsi quediversesautresprestations de service ont systématiquement amené TSADEGA COMPANY à offrir d'avantage de multiples opportunités d'emploi aux Jeunes. <br> <br>
+
+            L'une des particularités de TSADEGA COMPANY c'est de motiver au maximum ses équipes techniquespuisde savoir les booster vers l'atteinte des résultatsdavantagesatisfaisants. <br> <br>
+
+            En2017, lesdomainesde «l'électricité courant faible» furentapprivoisés. La mise à niveau du personnel fut faite, avec à la clé la création d'une section entièrement consacrée aux études techniques ainsi qu'aux réalisations «électricité courant faible». <br> <br>
+
+            La perpétuelle mise à jour des capacités et des compétences de son personnel est l'un des aspects qui valorise au mieux TSADEGA COMPANY. A travers de nombreuses réalisations menées avec rigueur dans le respect des normes etdes technologies, TSADEGA COMPANY a toujours susatisfaire sespartenaires.C'est ce qui pourrait bien justifier lestrente (30)ansd'activitéà ce jour. <br> <br>
+
+            Aujourd'hui, TSADEGA COMPANY fonctionne avec deux principaux départements: <br>
+            -Electricité Courant Fort (70% desactivités) <br>
+            -Electricité Courant Faible (30% des activités) <br>
+            TSADEGA COMPANY est situé dans la ville de Yaoundé, RueSébastienEssomba, au lieu-dit Montée Aurore. <br>
+            -Expérience:Plus de30ansde servicedans le domaine de l'électricité; <br>
+            -Slogan:«L'expertise électrique» <br>
+            -Contacts téléphoniques sont:(237) 699864576 / 69981960 <br>
+        </div>
+    </main>
+
+    <!-- Team Section -->
+    <section class="bg-white py-12 px-4 md:px-8">
+        <h2 class="text-3xl md:text-4xl font-semibold text-center mb-6">Notre équipe</h2>
+        <p class="text-[#272727] text-xl text-center max-w-3xl mx-auto mb-12">
+            Nous avons une équipe constituée de professionels qualifiés et dynamique
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            <!-- Team Member Card Template -->
+            <div class="relative">
+                <img src="assets/img/equipe.png" alt="Team Member" class="w-full aspect-square object-cover rounded-lg">
+                <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 bg-[#0047ab] text-white px-4 py-1 rounded">
+                    DIRECTEUR
+                </div>
+                <h3 class="text-xl font-semibold text-center mt-4">Jack Wilshere</h3>
+            </div>
+
+            <!-- Team Member Card Template -->
+            <div class="relative">
+                <img src="assets/img/equipe.png" alt="Team Member" class="w-full aspect-square object-cover rounded-lg">
+                <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 bg-[#0047ab] text-white px-4 py-1 rounded">
+                    DIRECTEUR
+                </div>
+                <h3 class="text-xl font-semibold text-center mt-4">Jack Wilshere</h3>
+            </div>
+
+            <!-- Team Member Card Template -->
+            <div class="relative">
+                <img src="assets/img/equipe.png" alt="Team Member" class="w-full aspect-square object-cover rounded-lg">
+                <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 bg-[#0047ab] text-white px-4 py-1 rounded">
+                    DIRECTEUR
+                </div>
+                <h3 class="text-xl font-semibold text-center mt-4">Jack Wilshere</h3>
+            </div>
+
+            <!-- Team Member Card Template -->
+            <div class="relative">
+                <img src="assets/img/equipe.png" alt="Team Member" class="w-full aspect-square object-cover rounded-lg">
+                <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 bg-[#0047ab] text-white px-4 py-1 rounded">
+                    DIRECTEUR
+                </div>
+                <h3 class="text-xl font-semibold text-center mt-4">Jack Wilshere</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- start footer section -->
+
+    <footer class="bg-[#293554] mt-[150px] py-12 text-white px-4 md:px-6 lg:px-0">
+        <div class="max-w-[1250px] mx-auto">
+            <div class="flex flex-col md:flex-row justify-between gap-12 md:gap-6">
+                <!-- Company Info -->
+                <div class="w-full md:w-1/2 lg:w-1/3 px-0 md:px-4 relative">
+                    <div class="absolute inset-0 bg-[url('assets/images/pngwing\ 1.png')] bg-no-repeat bg-contain opacity-10"></div>
+                    <div class="relative z-10 contact">
+                        <h2 class="uppercase text-3xl sm:text-4xlsm:text-center lg:text-5xl mb-6 lg:mb-8 text-center md:text-left font-bold">tsadega compagny</h2>
+                        <p class="leading-relaxed text-sm sm:text-base text-center md:text-left">
+                            L'expertise électrique <br><br>
+        
+                            6886, Rue Sebastien Essomba Yaoundé ,, Cameroun <br>
+                            tsadegacompany2004@yahoo.fr <br>
+                            (237) 699864576/ 699819604 <br>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Explore Links -->
+                <div class="w-full md:w-1/2 lg:w-1/3 px-0 md:px-4 flex flex-col gap-2 text-center md:text-left">
+                    <h3 class="text-xl sm:text-2xl mb-4">Explore</h3>
+                    <a href="#" class="text-white font-medium text-base sm:text-lg hover:text-[#0047AB] transition-colors">Home</a>
+                    <a href="#" class="text-white font-medium text-base sm:text-lg hover:text-[#0047AB] transition-colors">Service</a>
+                    <a href="#" class="text-white font-medium text-base sm:text-lg hover:text-[#0047AB] transition-colors">Contact Us</a>
+                    <a href="#" class="text-white font-medium text-base sm:text-lg hover:text-[#0047AB] transition-colors">About Us</a>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="w-full md:w-1/2 lg:w-1/3 px-0 md:px-4 text-center md:text-left">
+                    <h3 class="text-xl sm:text-2xl mb-4">Newsletter</h3>
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-0">
+                        <input type="email" 
+                               placeholder="Votre email" 
+                               class="w-full sm:w-auto border-none bg-white text-black px-4 sm:px-6 md:px-3 lg:px-4 py-2 sm:py-3 rounded-md sm:rounded-r-none" 
+                               aria-label="Email pour newsletter">
+                        <button type="submit" 
+                                class="w-full sm:w-auto bg-[#0047AB] text-white px-4 sm:px-5 md:px-2.5 lg:px-4 py-2 sm:py-3 text-lg sm:text-xl rounded-md sm:rounded-l-none hover:bg-[#003380] transition-colors">
+                            Souscrire
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="border-t border-black py-2.5">
+        <div class="flex justify-center items-center p-4">
+            <p class="text-[#bbbbbb] text-center text-sm mb:text-base">
+                Tsadega Company &copy; 2025 by <span class="text-[#0047AB] inline-block">DFK TECH</span> | all rights reserved!
+            </p>
+        </div>
+    </div>
+
+    <!-- end footer section -->
+</body>
+</html>
