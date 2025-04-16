@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="assets/css/styleIndex.css">
     <link rel="stylesheet" href="assets/css/styleservice.css">
     <script src="assets/js/scriptservice.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("auQuqZJZbMm6ier0T"); // Remplacez par votre clé publique EmailJS
+        })();
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
@@ -34,7 +40,7 @@
                     <img src="assets/img/cil-mobile.svg" class="w-[44px]" alt="phone">
                     <div>
                         <p class="text-[#8b8b8b] text-[15px]">Appelez-nous</p>
-                        <a href="+237699864576" class="text-[#0047ab] text-[15px]">+237(699864576)</a>
+                        <a href="https://wa.link/btlad7" class="text-[#0047ab] text-[15px]">+237(699864576)</a>
                     </div>
                 </div>
                 <img id="menu" src="assets/images/image_nav/menu_50px.png" class="block md:hidden lg:hidden w-[30px] hover-scale" alt="nav">
@@ -115,27 +121,70 @@
                     </p>
                 </div>
 
-                <form class="flex flex-col gap-5 justify-center items-center mx-10">
+                <form id="contact-form" class="flex flex-col gap-5 justify-center items-center mx-10">
                     <h1 class="font-bold text-2xl">Envoyez-nous un message</h1>
                     <div class="flex flex-col w-3/4 sm:w-full p-4">
                         <label for="nom">Nom Complet</label>
-
-                        <input class="border border-gray-300 rounded-md p-2 " type="name">
-
+                        <input class="border border-gray-300 rounded-md p-2" 
+                               type="text" 
+                               id="nom" 
+                               name="user_name" 
+                               required
+                               placeholder="Votre nom complet">
                     </div>
                     <div class="flex flex-col w-3/4 sm:w-full p-4">
                         <label for="email">Adresse mail</label>
-                        <input class="border border-gray-300 rounded-md p-2 focus:outline-none focus:shadow-inner" type="email">
+                        <input class="border border-gray-300 rounded-md p-2 focus:outline-none focus:shadow-inner" 
+                               type="email" 
+                               id="email" 
+                               name="user_email" 
+                               required
+                               placeholder="Votre adresse email">
                     </div>
                     <div class="flex flex-col w-3/4 sm:w-full p-4">
                         <label for="message">Message</label>
-                        <textarea class="border border-gray-300 rounded-md p-2 focus:outline-none focus:shadow-inner" name="message" id="message" rows="4" cols="50"></textarea>
+                        <textarea class="border border-gray-300 rounded-md p-2 focus:outline-none focus:shadow-inner" 
+                                  name="message" 
+                                  id="message" 
+                                  rows="4" 
+                                  cols="50"
+                                  required
+                                  placeholder="Votre message"></textarea>
                     </div>
                     <div class="flex flex-col w-3/4 sm:w-full p-4">
-                        <input class="border bg-[#0047AB] w-full p-2 pl-5 pr-5 hover:border-[#0047AB] hover:text-[#0047AB] hover:cursor-pointer hover:bg-white  rounded-md text-white" type="submit">
-
+                        <button type="submit" 
+                                class="border bg-[#0047AB] w-full p-2 pl-5 pr-5 hover:border-[#0047AB] hover:text-[#0047AB] hover:cursor-pointer hover:bg-white rounded-md text-white">
+                            Envoyer
+                        </button>
                     </div>
                 </form>
+
+                <script>
+                    const form = document.getElementById('contact-form');
+                    
+                    form.addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        
+                        // Afficher un message de chargement
+                        const submitButton = form.querySelector('button[type="submit"]');
+                        const originalText = submitButton.textContent;
+                        submitButton.textContent = 'Envoi en cours...';
+                        submitButton.disabled = true;
+
+                        emailjs.sendForm('service_se6rh7e', 'template_94u7kmx', this)
+                            .then(function() {
+                                alert('Message envoyé avec succès !');
+                                form.reset();
+                            }, function(error) {
+                                alert('Une erreur est survenue. Veuillez réessayer plus tard.');
+                                console.error('Erreur:', error);
+                            })
+                            .finally(function() {
+                                submitButton.textContent = originalText;
+                                submitButton.disabled = false;
+                            });
+                    });
+                </script>
             </div>
           </div>
     </main>
