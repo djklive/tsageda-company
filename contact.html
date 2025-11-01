@@ -24,7 +24,7 @@
     <!------------------------------------------ Debut du header ------------------------------------->
 
         <header class="bg-white animate-on-scroll header-scroll" >
-            <div class="flex flex-row justify-around h-[88px] items-center">
+            <div id="mobile-navbar" class="flex flex-row justify-around h-[88px] items-center">
                 <h1 class="text-[24px] text-[#0047AB] font-bold hover-scale title-focus">
                     TSADEGA COMPANY
                 </h1>
@@ -245,5 +245,40 @@
     </div>
 
     <!----------------------------------------- Fin du footer --------------------------------------------------->
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" aria-label="Retour en haut de la page" class="hidden fixed bottom-8 right-8 bg-[#0047AB] text-white p-3 rounded-full shadow-lg hover:bg-[#003380] transition-all duration-300 z-50 opacity-0 pointer-events-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
+    <script>
+        const backToTopButton = document.getElementById('backToTop');
+        
+        // Afficher le bouton après un scroll de 300px
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.remove('hidden', 'opacity-0', 'pointer-events-none');
+                backToTopButton.classList.add('opacity-100');
+            } else {
+                backToTopButton.classList.add('opacity-0');
+                setTimeout(() => {
+                    if (window.scrollY <= 300) {
+                        backToTopButton.classList.add('hidden', 'pointer-events-none');
+                    }
+                }, 300);
+            }
+        });
+        
+        // Scroll vers le haut au clic
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
 </body>
 </html>
