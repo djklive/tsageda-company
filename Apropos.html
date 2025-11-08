@@ -61,7 +61,7 @@
      </nav>
   
       <!-- sidbare -->
-      <div id="sidebar" class="sidebar hidden fixed flex w-full absolute top-0 py-5 text-white bg-[#0047AB] h-[100vh] shadow-xl flex-col items-center md:hidden lg:hidden duration-[.2s] z-50">
+      <div id="sidebar" class="sidebar hidden fixed flex w-full top-[88px] py-5 text-white bg-[#0047AB] h-[calc(100vh-88px)] shadow-xl flex-col items-center md:hidden lg:hidden duration-[.2s] z-50">
           <div class="flex flex-row justify-between items-center px-5 w-full">
               <h1 class="text-[24px] text-white font-bold hover-scale title-focus">
                   TSADEGA COMPANY
@@ -151,65 +151,60 @@
     </main>
 
     <!-- Team Section -->
-    <section class="bg-white py-12 px-4 md:px-8">
+    <section class="bg-white py-16 px-4 md:px-8">
         <h2 class="text-3xl md:text-4xl font-semibold text-center mb-6">Notre équipe</h2>
         <p class="text-[#272727] text-xl text-center max-w-3xl mx-auto mb-12">
-            Nous avons une équipe constituée de professionels qualifiés et dynamique
+            Nous avons une équipe constituée de professionnels qualifiés et dynamiques.
         </p>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-            <!-- Team Member Card Template -->
-            <div class="relative">
-                <img src="assets/images/image_equipe/Directeur.jpg" alt="Team Member" class="w-full aspect-square object-cover rounded-lg">
-                <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 bg-[#0047ab] text-white px-4 py-1 rounded">
-                    DIRECTEUR
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 max-w-7xl mx-auto">
+            <!-- Team Member Card -->
+            <div class="group bg-white shadow-xl rounded-xl pb-8 pt-6 px-6 flex flex-col items-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                <div class="w-40 h-40 rounded-full overflow-hidden border-4 border-[#0047ab] shadow-md bg-white mb-4 flex-shrink-0 flex items-center justify-center">
+                    <img src="assets/images/image_equipe/Directeur.jpg" alt="Eric Gaetan TSAFACK" class="object-contain w-full h-full transition-transform duration-300 group-hover:scale-105" />
                 </div>
-                <h3 class="text-xl font-semibold text-center mt-4">Eric Gaetan TSAFACK</h3>
+                <span class="bg-[#0047ab] text-white text-xs font-bold px-4 py-1 rounded-full shadow mb-2 uppercase tracking-wide">Directeur</span>
+                <h3 class="text-xl font-semibold text-center mt-2">Eric Gaetan TSAFACK</h3>
             </div>
 
-            <!-- Team Member Card Template -->
-            <div class="relative">
-                <img src="assets/images/image_equipe/Responsable Technique.jpg" alt="Team Member" class="w-full aspect-square object-cover rounded-lg">
-                <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 bg-[#0047ab] text-white px-4 py-1 rounded">
-                    Responsable Technique
+            <div class="group bg-white shadow-xl rounded-xl pb-8 pt-6 px-6 flex flex-col items-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                <div class="w-40 h-40 rounded-full overflow-hidden border-4 border-[#0047ab] shadow-md bg-white mb-4 flex-shrink-0 flex items-center justify-center">
+                    <img src="assets/images/image_equipe/Responsable Technique.jpg" alt="Eric Guy ATANGANA" class="object-contain w-full h-full transition-transform duration-300 group-hover:scale-105" />
                 </div>
-                <h3 class="text-xl font-semibold text-center mt-4">Eric Guy ATANGANA</h3>
+                <span class="bg-[#0047ab] text-white text-xs font-bold px-4 py-1 rounded-full shadow mb-2 uppercase tracking-wide">Responsable Technique</span>
+                <h3 class="text-xl font-semibold text-center mt-2">Eric Guy ATANGANA</h3>
             </div>
 
-            <!-- Team Member Card Template -->
-            <div class="relative">
-                <img src="assets/images/image_equipe/Chef Département Electricité.jpg" alt="Team Member" class="w-full aspect-square object-cover rounded-lg">
-                <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 bg-[#0047ab] text-white px-4 py-1 rounded">
-                    Chef Département Electricité
+            <div class="group bg-white shadow-xl rounded-xl pb-8 pt-6 px-6 flex flex-col items-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                <div class="w-40 h-40 rounded-full overflow-hidden border-4 border-[#0047ab] shadow-md bg-white mb-4 flex-shrink-0 flex items-center justify-center">
+                    <img src="assets/images/image_equipe/Chef Département Electricité.jpg" alt="Hervais KENMOGNE" class="object-contain w-full h-full transition-transform duration-300 group-hover:scale-105" />
                 </div>
-                <h3 class="text-xl font-semibold text-center mt-4">Hervais KENMOGNE</h3>
+                <span class="bg-[#0047ab] text-white text-xs font-bold px-4 py-1 rounded-full shadow mb-2 uppercase tracking-wide">Chef Dépt. Electricité</span>
+                <h3 class="text-xl font-semibold text-center mt-2">Hervais KENMOGNE</h3>
             </div>
 
-            <!-- Team Member Card Template -->
-            <div class="relative">
-                <img src="assets/images/image_equipe/Chef Département Maintenance.jpg" alt="Team Member" class="w-full aspect-square object-cover rounded-lg">
-                <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 bg-[#0047ab] text-white px-4 py-1 rounded">
-                    Chef Département Maintenance
+            <div class="group bg-white shadow-xl rounded-xl pb-8 pt-6 px-6 flex flex-col items-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                <div class="w-40 h-40 rounded-full overflow-hidden border-4 border-[#0047ab] shadow-md bg-white mb-4 flex-shrink-0 flex items-center justify-center">
+                    <img src="assets/images/image_equipe/Chef Département Maintenance.jpg" alt="Eric Dieudonné BAKANA" class="object-contain w-full h-full transition-transform duration-300 group-hover:scale-105" />
                 </div>
-                <h3 class="text-xl font-semibold text-center mt-4">Eric Dieudonné BAKANA</h3>
-            </div>
-            
-            <!-- Team Member Card Template -->
-            <div class="relative">
-                <img src="assets/images/image_equipe/Chef Département Etudes Techniques.jpg" alt="Team Member" class="w-full aspect-square object-cover rounded-lg">
-                <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 bg-[#0047ab] text-white px-4 py-1 rounded">
-                    Chef Département Etudes Techniques
-                </div>
-                <h3 class="text-xl font-semibold text-center mt-4">Roland Rodrigue DJAPPO</h3>
+                <span class="bg-[#0047ab] text-white text-xs font-bold px-4 py-1 rounded-full shadow mb-2 uppercase tracking-wide">Chef Dépt. Maintenance</span>
+                <h3 class="text-xl font-semibold text-center mt-2">Eric Dieudonné BAKANA</h3>
             </div>
 
-            <!-- Team Member Card Template -->
-            <div class="relative">
-                <img src="assets/images/image_equipe/Secrétaire-Comptable.jpg" alt="Team Member" class="w-full aspect-square object-cover rounded-lg">
-                <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 bg-[#0047ab] text-white px-4 py-1 rounded">
-                    Secrétaire-Comptable
+            <div class="group bg-white shadow-xl rounded-xl pb-8 pt-6 px-6 flex flex-col items-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                <div class="w-40 h-40 rounded-full overflow-hidden border-4 border-[#0047ab] shadow-md bg-white mb-4 flex-shrink-0 flex items-center justify-center">
+                    <img src="assets/images/image_equipe/Chef Département Etudes Techniques.jpg" alt="Roland Rodrigue DJAPPO" class="object-contain w-full h-full transition-transform duration-300 group-hover:scale-105" />
                 </div>
-                <h3 class="text-xl font-semibold text-center mt-4">Sipora Ngo BIMBAY</h3>
+                <span class="bg-[#0047ab] text-white text-xs font-bold px-4 py-1 rounded-full shadow mb-2 uppercase tracking-wide">Chef Dépt. Etudes Techniques</span>
+                <h3 class="text-xl font-semibold text-center mt-2">Roland Rodrigue DJAPPO</h3>
+            </div>
+
+            <div class="group bg-white shadow-xl rounded-xl pb-8 pt-6 px-6 flex flex-col items-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                <div class="w-40 h-40 rounded-full overflow-hidden border-4 border-[#0047ab] shadow-md bg-white mb-4 flex-shrink-0 flex items-center justify-center">
+                    <img src="assets/images/image_equipe/Secrétaire-Comptable.jpg" alt="Sipora Ngo BIMBAY" class="object-contain w-full h-full transition-transform duration-300 group-hover:scale-105" />
+                </div>
+                <span class="bg-[#0047ab] text-white text-xs font-bold px-4 py-1 rounded-full shadow mb-2 uppercase tracking-wide">Secrétaire-Comptable</span>
+                <h3 class="text-xl font-semibold text-center mt-2">Sipora Ngo BIMBAY</h3>
             </div>
         </div>
     </section>
@@ -227,7 +222,7 @@
                         <p class="leading-relaxed text-sm sm:text-base text-center md:text-left">
                             <p class="font-bold text-3xl">L'expertise électrique</p> <br><br>
         
-                            BP 6886, 64 Rue Essomba Yaoundé, Cameroun <br>
+                            BP 6886, 54 Rue Essomba Yaoundé, Cameroun <br>
                             tsadegacompany2004@yahoo.fr <br>
                             +237 699 864 576 / +237 699 819 604 <br>
                         </p>
