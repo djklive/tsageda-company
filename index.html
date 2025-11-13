@@ -346,6 +346,38 @@
 </button>
 
 <script>
+    //========= Explication et correction EmailJS pour Yahoo ===============
+    /**
+     * Vous obtenez l’erreur suivante avec EmailJS et Yahoo :
+     * 
+     * 412 (Precondition Failed) -- Yahoo: Message failed: 550 Request failed; Mailbox unavailable
+     *
+     * Cela vient du fait que Yahoo n'autorise pas ce type d'envoi via EmailJS (SMTP relay refusé,
+     * limitation stricte sur l’envoi de mails tiers), contrairement à Gmail qui accepte les emails via l’API EmailJS.
+     * Pour envoyer des emails via EmailJS :
+     *   - Utilisez un compte Gmail ou un domaine professionnel (Google Workspace, Outlook, etc.)
+     *   - Evitez d’utiliser un email Yahoo ! comme service_email dans EmailJS : cela ne marchera généralement pas.
+     * 
+     * Pour corriger : repassez sur un service Gmail dans vos paramètres EmailJS. Assurez-vous aussi 
+     * de l’avoir bien lié/validé dans la console EmailJS (https://dashboard.emailjs.com).
+     * 
+     * Note : Si vous souhaitez absolument utiliser Yahoo (non recommandé), il vous faudrait créer une 
+     * authentification SMTP custom côté backend (Node, PHP, ...), ce que EmailJS ne fait pas pour Yahoo.
+     * 
+     * ----
+     * Pour la page contact.html, gardez le template identique mais dans vos réglages EmailJS :
+     * 1. Remettez / connectez un compte GMAIL dans "Add Email Service"
+     * 2. Renseignez ce service_id dans votre code
+     * 3. 
+     * // Exemple d’appel dans JS :
+     *   emailjs.sendForm(
+     *      'service_gmail_xxxxxx', // doit être Gmail
+     *      'template_xxxxxxxx',
+     *      formElem
+     *   );
+     */
+
+    // --- Rappel Back to Top Button ---
     const backToTopButton = document.getElementById('backToTop');
     
     // Afficher le bouton après un scroll de 300px

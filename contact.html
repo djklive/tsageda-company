@@ -123,43 +123,106 @@
 
                 <form id="contact-form" class="flex flex-col gap-5 justify-center items-center mx-10">
                     <h1 class="font-bold text-2xl">Envoyez-nous un message</h1>
+                    
                     <div class="flex flex-col w-3/4 sm:w-full p-4">
                         <label for="nom">Nom Complet</label>
                         <input class="border border-gray-300 rounded-md p-2" 
-                               type="text" 
-                               id="nom" 
-                               name="user_name" 
-                               required
-                               placeholder="Votre nom complet">
+                            type="text" 
+                            id="nom" 
+                            name="name" 
+                            required
+                            placeholder="Votre nom complet">
                     </div>
+                    
                     <div class="flex flex-col w-3/4 sm:w-full p-4">
                         <label for="email">Adresse mail</label>
                         <input class="border border-gray-300 rounded-md p-2 focus:outline-none focus:shadow-inner" 
-                               type="email" 
-                               id="email" 
-                               name="user_email" 
-                               required
-                               placeholder="Votre adresse email">
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required
+                            placeholder="Votre adresse email">
                     </div>
+                    
                     <div class="flex flex-col w-3/4 sm:w-full p-4">
                         <label for="message">Message</label>
                         <textarea class="border border-gray-300 rounded-md p-2 focus:outline-none focus:shadow-inner" 
-                                  name="message" 
-                                  id="message" 
-                                  rows="4" 
-                                  cols="50"
-                                  required
-                                  placeholder="Votre message"></textarea>
+                                name="message" 
+                                id="message" 
+                                rows="4" 
+                                cols="50"
+                                required
+                                placeholder="Votre message"></textarea>
                     </div>
+                    
                     <div class="flex flex-col w-3/4 sm:w-full p-4">
                         <button type="submit" 
+                                id="submit-btn"
                                 class="border bg-[#0047AB] w-full p-2 pl-5 pr-5 hover:border-[#0047AB] hover:text-[#0047AB] hover:cursor-pointer hover:bg-white rounded-md text-white">
                             Envoyer
                         </button>
                     </div>
+                    
+                    <div id="result" class="hidden w-3/4 sm:w-full p-4"></div>
                 </form>
 
                 <script>
+                    const form = document.getElementById('contact-form');
+                    const result = document.getElementById('result');
+                    const submitBtn = document.getElementById('submit-btn');
+                    
+                    // REMPLACEZ cette URL par votre endpoint Getform
+                    const GETFORM_ENDPOINT = 'https://getform.io/f/axozkqgb';
+
+                    form.addEventListener('submit', async function(e) {
+                        e.preventDefault();
+                        
+                        submitBtn.textContent = 'Envoi en cours...';
+                        submitBtn.disabled = true;
+                        result.classList.add('hidden');
+
+                        const formData = new FormData(form);
+
+                        try {
+                            const response = await fetch(GETFORM_ENDPOINT, {
+                                method: 'POST',
+                                body: formData,
+                                headers: {
+                                    'Accept': 'application/json',
+                                }
+                            });
+
+                            if (response.ok) {
+                                result.innerHTML = `
+                                    <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
+                                        ✅ Message envoyé avec succès ! Nous vous répondrons bientôt.
+                                    </div>
+                                `;
+                                result.classList.remove('hidden');
+                                form.reset();
+                            } else {
+                                throw new Error('Erreur lors de l\'envoi');
+                            }
+                        } catch (error) {
+                            result.innerHTML = `
+                                <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+                                    ❌ Une erreur est survenue. Veuillez réessayer ou nous contacter via WhatsApp.
+                                </div>
+                            `;
+                            result.classList.remove('hidden');
+                            console.error('Erreur:', error);
+                        } finally {
+                            submitBtn.textContent = 'Envoyer';
+                            submitBtn.disabled = false;
+                            
+                            setTimeout(() => {
+                                result.classList.add('hidden');
+                            }, 5000);
+                        }
+                    });
+                </script>
+
+                <!--<script>
                     const form = document.getElementById('contact-form');
                     
                     form.addEventListener('submit', function(e) {
@@ -184,7 +247,7 @@
                                 submitButton.disabled = false;
                             });
                     });
-                </script>
+                </script>-->
             </div>
           </div>
     </main>
