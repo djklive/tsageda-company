@@ -1,0 +1,8 @@
+# robots.txt pour tsadega-company.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://tsadega-company.com/sitemap.xml
+
